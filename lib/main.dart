@@ -9,93 +9,73 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //title: 'MainPage',
       home: Scaffold(
         backgroundColor: Colors.amberAccent,
         appBar: AppBar(
-          title: Text(
-            'Repeat Code on the Project',
-            textAlign: TextAlign.center,
+          title: const Text(
+            'Repeat Code on Project',
           ),
         ),
         body: Row(
           children: [
-            Padding(padding: EdgeInsets.all(5)),
             Column(
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  color: Colors.brown,
-                  child: Center(child: Text('1')),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.lightBlueAccent,
-                  child: Center(child: Text('2')),
-                ),
-                Container(
-                  height: 130,
-                  width: 130,
-                  color: Colors.deepPurpleAccent,
-                  child: Center(child: Text('3')),
-                ),
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                RepeatedColumn(),
               ],
             ),
-            Padding(padding: EdgeInsets.all(5)),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  color: Colors.brown,
-                  child: Center(child: Text('1')),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.lightBlueAccent,
-                  child: Center(child: Text('2')),
-                ),
-                Container(
-                  height: 130,
-                  width: 130,
-                  color: Colors.deepPurpleAccent,
-                  child: Center(child: Text('3')),
-                ),
+              children: const [
+                RepeatedColumn(),
               ],
             ),
-            Padding(padding: EdgeInsets.all(5)),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  color: Colors.brown,
-                  child: const Center(
-                    child: Text('1'),
-                  ),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.lightBlueAccent,
-                  child: Center(child: Text('2')),
-                ),
-                Container(
-                  height: 130,
-                  width: 130,
-                  color: Colors.deepPurpleAccent,
-                  child: Center(child: Text('3')),
-                ),
+              children: const [
+                RepeatedColumn(),
               ],
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class RepeatedColumn extends StatelessWidget {
+  const RepeatedColumn({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      // mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        SizedBox(
+          height: 15,
+          width: 15,
+        ),
+        Container(
+          height: 70,
+          width: 70,
+          color: Colors.brown,
+          child: const Center(
+            child: Text('1'),
+          ),
+        ),
+        Container(
+          height: 100,
+          width: 100,
+          color: Colors.lightBlueAccent,
+          child: Center(child: Text('2')),
+        ),
+        Container(
+          height: 130,
+          width: 130,
+          color: Colors.deepPurpleAccent,
+          child: Center(child: Text('3')),
+        ),
+      ],
     );
   }
 }
