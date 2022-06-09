@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Row(
           children: [
+            // Не мог сделать ещё легко, Эсли есть варианты то подскажите Пожалуйста
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
@@ -51,6 +52,8 @@ class RepeatedColumn extends StatelessWidget {
     return Column(
       // mainAxisAlignment: MainAxisAlignment.end,
       children: [
+        // Знаю не адекватно положил SizedBox но в голове не пришлось другой решение
+
         SizedBox(
           height: 15,
           width: 15,
