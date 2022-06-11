@@ -16,28 +16,32 @@ class MyApp extends StatelessWidget {
             'Repeat Code on Project',
           ),
         ),
-        body: Row(
-          children: [
-            // Не мог сделать ещё легко, Эсли есть варианты то подскажите Пожалуйста
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                RepeatedColumn(),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                RepeatedColumn(),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                RepeatedColumn(),
-              ],
-            ),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              // Не мог сделать ещё легко, Эсли есть варианты то подскажите Пожалуйста
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  RepeatedColumn(),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  RepeatedColumn(),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  RepeatedColumn(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -54,10 +58,6 @@ class RepeatedColumn extends StatelessWidget {
       children: [
         // Знаю не адекватно положил SizedBox но в голове не пришлось другой решение
 
-        SizedBox(
-          height: 15,
-          width: 15,
-        ),
         Container(
           height: 70,
           width: 70,
